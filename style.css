@@ -1,0 +1,419 @@
+html {
+  /* Add styling for the dark mode toggle button */
+  #theme-button {
+    float: right;
+    padding: 15px 15px; /* Adjust padding to match other navigation items */
+    background-color: beige;
+  }
+  
+  /* Customize Dark Mode Theme */
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+ 
+  
+  height: 100%;
+  width: 100%;
+  h1,h2,h3,h4,h5,h6{
+  font-family: "Baskerville Old Face", sans-serif;
+  }
+  h1{
+    font-size:99px;
+  } 
+  p {
+    font-family:"Gill Sans Nova Light", sans-serif;
+  }
+ background-color: #f7f4e9;
+  
+
+
+  /*----rounded divider----*/
+  /* Rounded border */
+  hr.dotted {
+    border-top: 3px dashed #bbb;
+   /* border-radius: 50%;*/
+  }
+
+  
+/* this is where the slideshow style will be */
+  
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: center; 
+    margin: auto;
+    overflow: hidden;
+    width:50% /*if i add a ; here it will make the text and every actually fit properly (try it out later and change if need be) */
+    position: relative;
+    left:50%
+    top: 50%
+    transform: translate(-50%, -50%);
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    width: 100%;
+  }
+  /* Styling for the images */
+  .mySlides img {
+    width: 50%; /* Ensure images fill their container */
+    height: auto; /* Preserve aspect ratio */
+  }
+
+  /* Next & previous buttons */
+  /*
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:white;
+    width:70%
+    height=50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  } */
+
+  /* Position the "next button" to the right */
+  /*
+  .next {
+    right: 353px;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev{
+    margin-left: 345px;
+    border-radius: 3px 0 0 3px;
+  }
+*/
+  /* On hover, add a black background color with a little bit see-through */
+  /*
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+*/
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+
+  @keyframes fade {
+    from {opacity: 0.3}
+    to {opacity: 1}
+  }
+  
+/*----------------------------------------------------------*/
+  /*-----This is the fixed footer--->*/
+  footer {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding around content */
+    height: auto; /* Set height to auto to adjust based on content */
+
+  }
+  /* Footer container styles */
+  .footer-container {
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Two equal-width columns */
+    gap: 20px; /* Gap between columns */
+    text-align: center;
+  }
+
+  /* Contact form styles */
+  .contact-form,
+  .media-upload,
+  .petition-form,
+  .petition2{
+    display: inline-block; /* Display forms inline */
+    vertical-align: top; /* Align forms to the top */
+    padding: 10px; /* Padding for forms */
+    background-color: #444; /* Background color for forms */
+  }
+
+  .contact-form h2,
+  .media-upload h2,
+  .petition-form h2{
+    margin-bottom: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button,
+  .media-upload input,
+  .media-upload button,
+  .petition-form input,
+  .petition-form textarea,
+  .petition-form button,
+  #sign-petition2 input,
+  #sign-now-button{
+    width: 75%; /* Full width input fields */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .contact-form textarea,
+  .petition-form textarea{
+    height: 50px;
+  }
+
+  .contact-form button,
+  .media-upload button,
+  .petition-form button,
+  #sign-now-button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover,
+  .media-upload button:hover,
+  .petition-form button:hover,
+  #sign-now-button:hover{
+    background-color: #45a049;
+  }
+
+/*This is for Petition 2.0 
+  .petition2-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 10;
+    padding-bottom: 10px;
+  }
+
+  .petition2-para{
+    width: 25%;
+    padding-right: 10px;
+  }
+
+  .signatures{
+    width: 15%;
+    padding-right: 10px;
+  }
+  
+  
+/*_____________________________________________________*/  
+  /* THIS IS FOR THE FORM VALIDATION*/
+  /* Add to CSS file */
+  .error {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    background:pink;
+  }
+/*This is for the container for the 1st topic ("what is immigration")*/
+  .container {
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Vertically center items */
+    max-width: 1000px; 
+    margin: 0 auto;
+    
+  }
+
+  .container img {
+    justify-content:space-between ;
+    max-width: 70%; /* Limit the width of the image */
+    margin-right: 100px; /* Add right margin to create space between image and text */
+    }
+
+  .item {
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Vertically center items */
+    max-width:1000px;
+    margin: 0 auto; /* Add margin bottom for space between items */
+
+  }
+  .item img {
+    justify-content:space-between ;
+    max-width: 70%; /* Limit the width of the image */
+    margin-left: 100px; /* Add right margin to create space between image and text */
+    }
+  /*---------------------------------------------------------------------------------------*/
+}
+
+/*-------------------------------------------------------*/
+.video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50vh; /* Adjust this to control the height of the container */
+}
+
+/*--This is for the NAVIGATION BAR--*/
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+   /*
+    position: -webkit-sticky; /* Safari */
+   /* position: sticky; */
+    
+    top: 0px;
+    
+    .active {
+      background-color: #04AA6D;
+     
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 17px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+}
+  
+/*----------------------------------------------------------------------*/
+    /*-----This is the back to top button--->*/
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color:#04AA6D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Initially hide the button */
+}
+
+
+
+/*---------------This is the active style--------------------------*/
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+/*---------------This is the animated style--------------------------*/
+// Define the animation object
+let animation = {
+  revealDistance: 150,
+  initialOpacity: 0,
+  transitionDelay: '0s',
+  transitionDuration: '1s',
+  transitionProperty: 'all',
+  transitionTimingFunction: 'ease',
+};
+
+// Add the Reduce Motion button to the header
+const reduceMotionButton = document.createElement('button');
+reduceMotionButton.textContent = 'Reduce Motion';
+reduceMotionButton.id = 'reduce-motion-button';
+
+// Add event listener to the Reduce Motion button
+reduceMotionButton.addEventListener('click', reduceMotion);
+
+// Append the Reduce Motion button to the header
+document.querySelector('.header').appendChild(reduceMotionButton);
+
+// Define the reduceMotion function
+function reduceMotion() {
+  // Update animation object values
+  animation.transitionDuration = '0.3s'; // Example: Change transition duration
+  animation.transitionTimingFunction = 'linear'; // Example: Change transition timing function
+
+  // Loop through revealableContainers and update styles
+  for (let i = 0; i < revealableContainers.length; i++) {
+    revealableContainers[i].style.transitionDelay = animation.transitionDelay;
+    revealableContainers[i].style.transitionDuration = animation.transitionDuration;
+    revealableContainers[i].style.transitionProperty = animation.transitionProperty;
+    revealableContainers[i].style.transitionTimingFunction = animation.transitionTimingFunction;
+  }
+}
+
+/*----------------This is the Modal---------------*/
+/* the modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Position the modal */
+  z-index: 2; /* Ensure the modal is above other content */
+  left: 50%; /* Center the modal horizontally */
+  top: 50%; /* Center the modal vertically */
+  transform: translate(-50%, -50%); /* Center the modal precisely */
+  /*padding:100%;*/ /* adds the opactiy background but takes away the content box*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black - other elements can still be seen */
+  max-width: 100%; /* Set maximum width for the modal */
+  max-height: 100%; /* Set maximum height for the modal */
+  flex-direction: column; /* these flexbox rules center the content on the screen */
+  align-items: center;
+  justify-content: center;
+}
+
+/* box that contains all the content and images */
+.modal-content {
+  background-color: lightsteelblue; /* update the colors and font sizes as you like */
+  color: black;
+  font:"Gill Sans Nova Light", sans-serif;
+  text-align: center;
+  font-size: 3rem;
+  display: flex; /* adds flexbox to center all items */
+  justify-content: center;
+  align-items: center;
+}
+/* Close button */
+.close {
+  position: absolute; /* Position the close button */
+  top: 10px; /* Adjust top position */
+  right: 10px; /* Adjust right position */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+#thanks-modal-content {
+  width: 20rem; /* sets a default width for the text container */
+}
+
+#modal-text-container {
+  display: flex; /* adds flexbox to center the text and buttons (stretch feature) */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
